@@ -191,6 +191,13 @@ const achievementSection = {
       image: require("./assets/images/PowerBI.png"),
       imageAlt: "Power BI Logo",
       footerLink: []
+    },
+    {
+      title: "Analyze Data With SQL",
+      subtitle: "Practical SQL for Business Intelligence, Data Transformation & Reporting",
+      image: require("./assets/images/sql.png"),
+      imageAlt: "SQL Logo",
+      footerLink: []
     }
   ],
   display: true
