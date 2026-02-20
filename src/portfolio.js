@@ -17,21 +17,21 @@ const greeting = {
   username: "Danijel Golubovic",
   title: "Hi all, I'm Danijel",
   subTitle: emoji(
-    "Project Management professional with hands-on experience in PM tools and reporting, Power BI, SQL, Excel, and D365. Strong background in data visualization, stakeholder management, and project compliance across diverse industries."
+    "Data Analyst professional with hands-on experience in financial controlling and reporting, Power BI, SQL, Excel, and D365. Strong background in data visualization, ETL, data modelling, stakeholder management, and project compliance across diverse industries."
   ),
   resumeLink: "https://drive.google.com/file/d/1OdUaYb_wR8iSt0QjdWUaenNCR2VHY1GK/view?usp=sharing",
   displayGreeting: true
 };
 
 const socialMediaLinks = {
-  // github: "https://github.com/Qrcina",
-  linkedin: "https://www.linkedin.com/in/danijel-golubovic-317883113/",
+  // github: "https://github.com/danijel89-spec",
+  linkedin: "https://www.linkedin.com/in/danijelgolubovic/",
   display: true
 };
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "DATA-DRIVEN PROJECT MANAGER WITH A KNACK FOR PROCESS OPTIMIZATION AND REPORTING",
+  subTitle: "DATA-DRIVEN ANALYST WITH A KNACK FOR PROCESS OPTIMIZATION AND REPORTING",
   skills: [
     emoji("⚡ Proficient in data analysis using Power BI, SQL, and Excel"),
     emoji("⚡ Experienced in creating project dashboards, tracking KPIs, and financial metrics"),
@@ -43,7 +43,8 @@ const skillsSection = {
     { skillName: "Excel", fontAwesomeClassname: "fas fa-file-excel" },
     { skillName: "Python", fontAwesomeClassname: "fab fa-python" },
     { skillName: "Scrum", fontAwesomeClassname: "fas fa-project-diagram" },
-    { skillName: "Project Management", fontAwesomeClassname: "fas fa-tasks" }
+    { skillName: "Project Management", fontAwesomeClassname: "fas fa-tasks" },
+    { skillName: "Dynamics 365", fontAwesomeClassname: "fab fa-microsoft" },
   ],
   display: true
 };
@@ -83,10 +84,22 @@ const workExperiences = {
   display: true,
   experience: [
     {
+      role: "Power BI Manager",
+      company: "Virtuozzo",
+      companylogo: require("./assets/images/virtuozzo.png"),
+      date: "10/2025 – Present",
+      descBullets: [
+        "Lead development of executive and operational Power BI dashboards integrating Salesforce, SQL and financial data sources",
+        "Design and maintain scalable data models, DAX measures and reporting standards for ARR, MRR, TCV and discount analysis",
+        "Collaborate with Finance and leadership stakeholders to translate business requirements into data-driven insights",
+        "Improve reporting automation and governance to enhance visibility across global business units"
+      ]
+    },
+    {
       role: "Project Management Officer",
       company: "Merkle",
       companylogo: require("./assets/images/merkle.jpg"),
-      date: "05/2022 – Present",
+      date: "05/2022 – 09-2025",
       descBullets: [
         "Provide tools/reports to support project managers and ensure compliance",
         "Monitor KPIs, analyze financials, train on PM standards",
@@ -117,7 +130,7 @@ const workExperiences = {
     {
       role: "Project Officer",
       company: "Ministry of Labor, Employment, Veteran and Social Affairs",
-      companylogo: require("./assets/images/random.png"),
+      companylogo: require("./assets/images/lines.jpg"),
       date: "09/2021 – 02/2022",
       descBullets: [
         "Supported program activities, stakeholders and reporting",
@@ -127,7 +140,7 @@ const workExperiences = {
     {
       role: "Business Consultant",
       company: "Gabriel Education Ltd.",
-      companylogo: require("./assets/images/random.png"),
+      companylogo: require("./assets/images/lines.jpg"),
       date: "02/2018 – 07/2019",
       descBullets: [
         "Implemented curriculum changes, reported effectiveness",
@@ -137,7 +150,7 @@ const workExperiences = {
     {
       role: "Educational Recruiter",
       company: "Career Oversea Ltd.",
-      companylogo: require("./assets/images/random.png"),
+      companylogo: require("./assets/images/lines.jpg"),
       date: "02/2017 – 02/2018",
       descBullets: [
         "Provided academic counseling and developed outreach strategies",
@@ -177,13 +190,6 @@ const achievementSection = {
       subtitle: "Certified in Data Analysis and Visualization using Power BI",
       image: require("./assets/images/PowerBI.png"),
       imageAlt: "Power BI Logo",
-      footerLink: []
-    },
-    {
-      title: "Analyze Data with SQL",
-      subtitle: "Certified in Analyzing Data with SQL",
-      image: require("./assets/images/sql.png"),
-      imageAlt: "SQL Logo",
       footerLink: []
     }
   ],
