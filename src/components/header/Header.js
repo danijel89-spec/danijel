@@ -29,7 +29,12 @@ function Header() {
       <header className={isDark ? "dark-menu header" : "header"}>
         <div
           className="logo"
-          style={{ display: "flex", alignItems: "center", gap: "8px", cursor: "default" }}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "8px",
+            cursor: "default"
+          }}
         >
           <span className="grey-color"> &lt;</span>
           <span className="logo-name">{greeting.username}</span>
@@ -40,7 +45,7 @@ function Header() {
         <label
           className="menu-icon"
           htmlFor="menu-btn"
-          style={{ color: "white" }}
+          style={{color: "white"}}
         >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
