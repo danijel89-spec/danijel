@@ -595,12 +595,8 @@
                   linear-gradient(135deg, rgba(78,168,255,0.13), rgba(139,92,246,0.07));
     }
     .project-card:nth-child(2) .project-visual {
-      background: radial-gradient(circle at top left, rgba(138,43,226,0.26), transparent 50%),
-                  linear-gradient(135deg, rgba(138,43,226,0.14), rgba(34,211,160,0.07));
-    }
-    .project-card:nth-child(3) .project-visual {
-      background: radial-gradient(circle at top left, rgba(240,200,7,0.24), transparent 50%),
-                  linear-gradient(135deg, rgba(240,200,7,0.13), rgba(139,92,246,0.07));
+      background: radial-gradient(circle at top left, rgba(139,92,246,0.26), transparent 50%),
+                  linear-gradient(135deg, rgba(139,92,246,0.14), rgba(34,211,160,0.07));
     }
 
     .mock-window {
@@ -613,8 +609,7 @@
     .mock-tile { height: 50px; border-radius: 12px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.07); }
     .mock-chart { display: flex; gap: 6px; align-items: flex-end; height: 70px; }
     .mock-chart span { flex: 1; border-radius: 6px 6px 2px 2px; background: linear-gradient(180deg, rgba(78,168,255,0.9), rgba(78,168,255,0.18)); }
-    .project-card:nth-child(2) .mock-chart span { background: linear-gradient(180deg, #8A2BE2, rgba(138,43,226,0.18)); }
-    .project-card:nth-child(3) .mock-chart span { background: linear-gradient(180deg, #F0C807, rgba(240,200,7,0.18)); }
+    .project-card:nth-child(2) .mock-chart span { background: linear-gradient(180deg, rgba(139,92,246,0.9), rgba(139,92,246,0.18)); }
 
     .project-body { padding: 26px; }
     .project-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
@@ -629,8 +624,7 @@
       text-transform: uppercase;
       letter-spacing: 0.07em;
     }
-    .project-card:nth-child(2) .pill { color: #eadcff; border-color: rgba(138,43,226,0.28); background: rgba(138,43,226,0.12); }
-    .project-card:nth-child(3) .pill { color: #fff5b8; border-color: rgba(240,200,7,0.28); background: rgba(240,200,7,0.11); }
+    .project-card:nth-child(2) .pill { color: #e2d8ff; border-color: rgba(139,92,246,0.24); background: rgba(139,92,246,0.1); }
     .project-title { font-size: 1.2rem; margin-bottom: 9px; }
     .project-desc { color: var(--muted); font-size: 0.92rem; font-weight: 300; line-height: 1.65; margin-bottom: 18px; }
     .project-footer {
@@ -725,6 +719,74 @@
       line-height: 1.75;
     }
     .faq-answer strong { color: var(--text); }
+
+
+    /* ─── CV / RESUME ─── */
+    .cv-section {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .cv-card {
+      position: relative;
+      overflow: hidden;
+      padding: 34px;
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at top left, rgba(240, 200, 7, 0.18), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(138, 43, 226, 0.16), transparent 42%),
+        var(--surface);
+    }
+
+    .cv-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), transparent 46%);
+      pointer-events: none;
+    }
+
+    .cv-content {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cv-content h2 {
+      margin-bottom: 12px;
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+    }
+
+    .cv-content p {
+      max-width: 680px;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.75;
+    }
+
+    .cv-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    @media (max-width: 720px) {
+      .cv-card {
+        padding: 26px 22px;
+      }
+
+      .cv-content {
+        grid-template-columns: 1fr;
+      }
+
+      .cv-actions {
+        justify-content: flex-start;
+      }
+    }
 
     /* ─── CONTACT ─── */
     .contact { padding-bottom: 80px; }
@@ -833,6 +895,7 @@
           <li><a href="#experience" class="">Experience</a></li>
           <li><a href="#portfolio" class="">Portfolio</a></li>
           <li><a href="#recruiter-questions" class="">Recruiter Q&amp;A</a></li>
+          <li><a href="Danijel_Golubovic_CV.pdf" target="_blank" rel="noopener noreferrer" class="">CV</a></li>
           <li><a href="#contact" class="nav-cta">Contact</a></li>
         </ul>
       </nav>
@@ -851,6 +914,7 @@
             </p>
             <div class="hero-actions">
               <a href="#portfolio" class="btn btn-primary">View dashboards →</a>
+              <a href="Danijel_Golubovic_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open CV PDF</a>
               <a href="mailto:thegolub1989@gmail.com" class="btn btn-secondary">Contact me</a>
             </div>
             <ul class="quick-points">
@@ -1277,6 +1341,26 @@
       </section>
 
       <!-- CONTACT -->
+
+      <section id="cv" class="container cv-section">
+        <div class="cv-card card reveal">
+          <div class="cv-content">
+            <div>
+              <div class="section-kicker">CV / Resume</div>
+              <h2>Prefer a traditional CV?</h2>
+              <p>
+                Open or download my PDF resume for a concise overview of my Power BI, SQL, financial reporting,
+                data modelling, dashboarding and business analytics experience.
+              </p>
+            </div>
+            <div class="cv-actions">
+              <a href="Danijel_Golubovic_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open CV PDF →</a>
+              <a href="Danijel_Golubovic_CV.pdf" download class="btn btn-secondary">Download</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="container contact">
         <div class="contact-card reveal visible">
           <div class="section-kicker">Contact</div>
