@@ -1,0 +1,47 @@
+# Danijel Golubović
+
+> Power BI and Data Analyst based in Belgrade, Serbia. Builds Power BI dashboards, SQL analyses and automated reporting for finance, operations and executive teams. Open to full-time, part-time, remote or hybrid roles (European hours), plus freelance and consulting projects.
+
+Website: https://danijelgolubovic.com
+LinkedIn: https://linkedin.com/in/danijelgolubovic
+Email: thegolub1989@gmail.com
+CV (PDF): https://danijelgolubovic.com/Danijel_Golubovic_CV.pdf
+
+## Summary
+- 5+ years in data, reporting and project controlling across 4 industries (betting and gaming, logistics/postal finance, SaaS, digital agency/PMO).
+- Strongest area: end-to-end Power BI delivery: Power Query, data modelling (star schema), DAX, dashboard design and business KPI implementation.
+- Connects data structure with business meaning: what a metric means, how it is calculated, and how stakeholders should act on it.
+- Target roles: Data Analyst, BI Analyst, Power BI Developer, Finance Data Analyst.
+- Best-fit domains: finance, SaaS, operations, commercial analytics, project reporting, KPI-heavy management reporting.
+
+## Experience
+- MaxBet, Sport BI Analyst (07/2026 – present): Power BI dashboards for sportsbook and gaming KPIs (registrations, deposits, GGR, active players); SQL on Amazon Redshift; data models and DAX for bet, win, net deposits, conversion and retention; automated KPI monitoring for commercial, operations and management teams.
+- Österreichische Post AG, Finance Data Analyst (03/2026 – 07/2026): financial KPI dashboards, automated financial reporting with Power BI, Power Query and Excel; SQL extraction; variance analysis, profitability, budgeting and forecasting support.
+- Virtuozzo, Power BI Manager (10/2025 – 03/2026): led end-to-end Power BI implementation and adoption; SaaS KPI dashboards (MRR, churn, CAC, growth); integrated Salesforce, ERP and SQL sources; BI enablement and self-service training.
+- Merkle DACH, Medior Project Management Officer (05/2022 – 10/2025): automated Excel reporting suites and Power BI dashboards for project health and financials; Dynamics 365 analysis of contracts, costs and timesheets; reporting transparency via Jira and Confluence.
+- Green Trust Consultancy, IT Manager (04/2021 – 05/2022): reporting tools and data structures, automation of manual data entry, data quality, cloud migration and cybersecurity.
+
+## Portfolio (live Power BI dashboards)
+- SaaS Metrics Dashboard: recurring revenue, churn, CAC, growth and segment performance. https://app.powerbi.com/view?r=eyJrIjoiM2ViYTM3YWQtYWNlNy00M2U3LThlMWQtNzJjMmE1ZjM5OTJhIiwidCI6ImY2ZTg0YjVjLTg1NzctNGRiZi04NjAzLTQ1NWY0ZDhlNTgxMyIsImMiOjl9
+- Betting Analytics Dashboard: registrations, first-time depositors, deposits, withdrawals, net deposits, bet, win, GGR, conversion and active players. https://app.powerbi.com/view?r=eyJrIjoiODJkY2QyZDAtMjY2NS00YzU0LTk4NDAtN2JmNzk5ZGU3ZGY0IiwidCI6ImY2ZTg0YjVjLTg1NzctNGRiZi04NjAzLTQ1NWY0ZDhlNTgxMyIsImMiOjl9
+- Sales Performance Dashboard: pipeline health, rep performance, regional split and revenue forecasting with drill-through. https://app.powerbi.com/view?r=eyJrIjoiYjY4NTI1OTQtYjIxMS00NzMxLTkwNTctZjlmYjE1ZjZkMWU2IiwidCI6ImY2ZTg0YjVjLTg1NzctNGRiZi04NjAzLTQ1NWY0ZDhlNTgxMyIsImMiOjl9
+
+## Services (freelance and consulting)
+- Power BI dashboard, end to end: data model, source connections, DAX with documented KPI logic, decision-focused design, scheduled refresh.
+- Reporting cleanup and automation: replace manual Excel routines with Power Query and SQL pipelines and one trusted source.
+- Power BI audit: model, DAX, performance, refresh, data quality and governance review with a prioritised fix list.
+- KPI design and management reporting: KPI definitions, variance/budget/forecast views, executive summary and drill-down, hand-over documentation.
+- Process: free 30-minute intro call, written scope and quote, build in iterations, hand-over with documentation and walkthrough.
+
+## Skills
+- BI and modelling: Power BI, DAX, Power Query, data modelling, dashboard UX
+- Data and analysis: SQL (Amazon Redshift), Advanced Excel, Power Pivot, KPI and variance analysis
+- Business systems: Dynamics 365, Salesforce, SAP, Jira, Confluence
+- Business context: financial reporting, FP&A, SaaS KPIs, process automation, PRINCE2, PMO, Agile
+
+## Certifications and education
+- Microsoft Power BI Data Analyst Professional (Microsoft, via Coursera)
+- PRINCE2 Foundation (PeopleCert)
+- Analyze Data with SQL (Skillsoft)
+- MA, Innovation and Technology Management, University of Tartu, Estonia
+- Bachelor, Finance, Banking and Insurance, University of Niš, Serbia
