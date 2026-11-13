@@ -354,18 +354,16 @@ footer .mono{width:16px;vertical-align:-3px;margin-right:10px}
 .prompt-box .bar2{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px 12px 22px;border-top:1px solid rgba(238,231,215,.08);font-size:13.5px;color:var(--ash)}
 .prompt-box .bar2 button{font-size:13.5px;color:var(--ivory);border:1px solid rgba(238,231,215,.2);padding:8px 14px;border-radius:30px;transition:all .3s}
 .prompt-box .bar2 button:hover{border-color:var(--gold);color:var(--gold-hi)}
-.ai-go{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.ai-go{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px}
 .ai-go a{display:flex;flex-direction:column;gap:2px;padding:16px 18px;border-radius:16px;border:1px solid rgba(238,231,215,.14);transition:background .45s var(--ease),border-color .45s,color .45s,transform .45s var(--ease)}
 .ai-go a b{font-family:var(--serif);font-weight:500;font-size:21px}
 .ai-go a span{font-size:13px;color:var(--ash);transition:color .45s}
 .ai-go a:hover{background:var(--gold);border-color:var(--gold);color:#0A0805;transform:translateY(-3px)}
 .ai-go a:hover span{color:rgba(10,8,5,.7)}
 .ai-note{font-size:13.5px;color:var(--ash);margin-top:14px}
-@media (max-width:1000px){.ai-band{grid-template-columns:1fr}.ai-go{grid-template-columns:1fr}}
+@media (max-width:1000px){.ai-band{grid-template-columns:1fr}}
+@media (max-width:480px){.ai-go{grid-template-columns:1fr}}
 
-/* scramble */
-.scr{display:inline}
-.scr .gl{color:var(--gold);opacity:.75;font-style:normal}
 
 /* cursor */
 .cursor{position:fixed;top:0;left:0;z-index:120;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid rgba(226,202,147,.7);border-radius:50%;pointer-events:none;transition:width .35s var(--ease),height .35s var(--ease),margin .35s var(--ease),background .35s,opacity .3s;opacity:0}
@@ -779,7 +777,7 @@ footer .mono{width:16px;vertical-align:-3px;margin-right:10px}
     <div>
       <span class="idx">Ask an AI</span>
       <h2>Let your AI assistant read my profile.</h2>
-      <p class="intro">Short on time? Open ChatGPT, Claude or Perplexity with a ready-made prompt. It reads a summary of my experience, portfolio and services from this site and answers <b>your</b> questions, such as whether I fit your role or project.</p>
+      <p class="intro">Short on time? Open ChatGPT, Claude, Gemini or Perplexity with a ready-made prompt. It reads a summary of my experience, portfolio and services from this site and answers <b>your</b> questions, such as whether I fit your role or project.</p>
     </div>
     <div>
       <div class="prompt-box">
@@ -791,6 +789,7 @@ footer .mono{width:16px;vertical-align:-3px;margin-right:10px}
         <a id="aiChatgpt" href="#" target="_blank" rel="noopener"><b>ChatGPT</b><span>Open with prompt</span></a>
         <a id="aiClaude" href="#" target="_blank" rel="noopener"><b>Claude</b><span>Open with prompt</span></a>
         <a id="aiPerplexity" href="#" target="_blank" rel="noopener"><b>Perplexity</b><span>Open with prompt</span></a>
+        <a id="aiGemini" href="#" target="_blank" rel="noopener"><b>Gemini</b><span>Opens and copies prompt</span></a>
       </div>
       <p class="ai-note" id="aiNote">Prefer a human? Scroll down and message me directly.</p>
     </div>
@@ -913,8 +912,10 @@ footer .mono{width:16px;vertical-align:-3px;margin-right:10px}
     $('#aiChatgpt').href='https://chatgpt.com/?q='+q;
     $('#aiClaude').href='https://claude.ai/new?q='+q;
     $('#aiPerplexity').href='https://www.perplexity.ai/search?q='+q;
+    $('#aiGemini').href='https://gemini.google.com/app?q='+q;
   }
   aiCtx.addEventListener('input',renderPrompt); renderPrompt();
+  $('#aiGemini').addEventListener('click',()=>{navigator.clipboard&&navigator.clipboard.writeText(buildPrompt().text).then(()=>{$('#aiNote').textContent='Prompt copied. If Gemini opens with an empty box, paste it there.';}).catch(()=>{});});
   $('#aiCopy').addEventListener('click',async()=>{const b=$('#aiCopy');try{await navigator.clipboard.writeText(buildPrompt().text);b.textContent='Copied';}catch(e){b.textContent='Select and copy the text above';}setTimeout(()=>b.textContent='Copy prompt',2200);});
 
   /* contact form */
@@ -939,29 +940,6 @@ footer .mono{width:16px;vertical-align:-3px;margin-right:10px}
     sendBtn.disabled=false;
   });
 
-  /* text scramble: glyphs decode into the heading */
-  const GLYPHS='∑Δ%#<>/\\{}[]=+*01∫≈µ$€_';
-  function scramble(el){
-    if(el._scr) return; el._scr=true;
-    const text=el.dataset.text; const n=text.length; let frame=0;
-    const queue=[...text].map((ch,i)=>({ch,start:Math.floor(Math.random()*22),end:28+Math.floor(i*1.5)+Math.floor(Math.random()*20)}));
-    el.style.minHeight=el.offsetHeight+'px';
-    (function tick(){
-      let out='',done=0;
-      for(const q of queue){
-        if(q.ch===' '){out+=' ';done++;continue;}
-        if(frame>=q.end){out+=q.ch.replace(/&/g,'&amp;').replace(/</g,'&lt;');done++;}
-        else if(frame>=q.start){if(!q.g||frame%3===0)q.g=GLYPHS[Math.floor(Math.random()*GLYPHS.length)];const g=q.g;out+='<span class="gl">'+g.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</span>';}
-        else out+='<span class="gl">'+(Math.random()<.5?'0':'1')+'</span>';
-      }
-      el.innerHTML=out; frame++;
-      if(done<n) requestAnimationFrame(tick); else {el.textContent=text; el.style.minHeight=''; el._scr=false;}
-    })();
-  }
-  const scrEls=$$('.sec-head h2, .process h3, .sec-head .idx, .ai-band h2');
-  scrEls.forEach(el=>{el.dataset.text=el.textContent; el.setAttribute('aria-label',el.textContent);});
-  $$('.sec-head h2').forEach(el=>el.addEventListener('mouseenter',()=>scramble(el)));
-
   /* mobile menu */
   const mb=$('.menu-btn');
   mb.addEventListener('click',()=>{const o=!document.body.classList.contains('menu-open');document.body.classList.toggle('menu-open',o);mb.setAttribute('aria-expanded',o);$('.sheet').setAttribute('aria-hidden',!o);});
@@ -981,7 +959,6 @@ footer .mono{width:16px;vertical-align:-3px;margin-right:10px}
   if (!hasGsap || reduce){
     finishLoad();
     $$('.statement .w').forEach(w=>w.style.opacity=1);
-    if(!reduce && 'IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){scramble(en.target);io.unobserve(en.target);}}),{threshold:.6});scrEls.forEach(el=>io.observe(el));}
     return;
   }
 
@@ -1080,7 +1057,6 @@ footer .mono{width:16px;vertical-align:-3px;margin-right:10px}
   gsap.fromTo('.marquee .ln.b',{xPercent:-30},{xPercent:0,ease:'none',scrollTrigger:{trigger:'.skills',start:'top bottom',end:'bottom top',scrub:.6}});
 
   /* section headings rise once */
-  scrEls.forEach(el=>ScrollTrigger.create({trigger:el,start:'top 82%',once:true,onEnter:()=>scramble(el)}));
 
   /* services */
   mm.add('(min-width:1001px)',()=>{gsap.to('#stepThread',{scaleX:1,ease:'none',scrollTrigger:{trigger:'.steps',start:'top 80%',end:'bottom 55%',scrub:true}});});
