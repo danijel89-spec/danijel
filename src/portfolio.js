@@ -222,7 +222,7 @@ const resumeSection = {
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle: "Discuss a project or just want to say hi? My inbox is open.",
-  number: "+381642924156",
+  number: "",
   email_address: "thegolub1989@gmail.com"
 };
 const twitterDetails = {userName: "", display: false};
