@@ -22,7 +22,7 @@ CV (PDF): https://danijelgolubovic.com/Danijel_Golubovic_CV.pdf
 - Green Trust Consultancy, IT Manager (04/2021 – 05/2022): reporting tools and data structures, automation of manual data entry, data quality, cloud migration and cybersecurity.
 
 ## Portfolio (live Power BI dashboards)
-- SaaS Metrics Dashboard: three audience views (executive, director, operative) of a subscription business: MRR trend and MRR bridge, net revenue retention, CLV vs CAC, acquisition channels, churn drivers, NPS and plan health. https://app.powerbi.com/view?r=eyJrIjoiODJkY2QyZDAtMjY2NS00YzU0LTk4NDAtN2JmNzk5ZGU3ZGY0IiwidCI6ImY2ZTg0YjVjLTg1NzctNGRiZi04NjAzLTQ1NWY0ZDhlNTgxMyIsImMiOjl9
+- SaaS Metrics Dashboard: three audience views (executive, director, operative) of a subscription business: MRR trend and MRR bridge, net revenue retention, CLV vs CAC, acquisition channels, churn drivers, NPS and plan health. https://app.powerbi.com/view?r=eyJrIjoiMzAwZjcxNTQtYjhiYy00YjE4LWI4ODItMTdhNzc0YmUzNDQyIiwidCI6ImY2ZTg0YjVjLTg1NzctNGRiZi04NjAzLTQ1NWY0ZDhlNTgxMyIsImMiOjl9
 - Betting Analytics Dashboard: registrations, first-time depositors, deposits, withdrawals, net deposits, bet, win, GGR, conversion and active players. https://app.powerbi.com/view?r=eyJrIjoiYjY4NTI1OTQtYjIxMS00NzMxLTkwNTctZjlmYjE1ZjZkMWU2IiwidCI6ImY2ZTg0YjVjLTg1NzctNGRiZi04NjAzLTQ1NWY0ZDhlNTgxMyIsImMiOjl9
 - Sales Performance Dashboard: pipeline health, rep performance, regional split and revenue forecasting with drill-through. https://app.powerbi.com/view?r=eyJrIjoiM2ViYTM3YWQtYWNlNy00M2U3LThlMWQtNzJjMmE1ZjM5OTJhIiwidCI6ImY2ZTg0YjVjLTg1NzctNGRiZi04NjAzLTQ1NWY0ZDhlNTgxMyIsImMiOjl9
 
