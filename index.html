@@ -42,6 +42,8 @@
 html{background:var(--ink);-webkit-text-size-adjust:100%}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
+/* Bodoni's display optical size has hairlines too thin for phone screens; pin a sturdier optical size */
+*{font-variation-settings:"opsz" 12}
 body{background:var(--ink);color:var(--ivory);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 body.is-loading{overflow:hidden}
 ::selection{background:var(--gold);color:#000}
